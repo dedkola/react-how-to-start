@@ -8,21 +8,24 @@
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script type="text/jsx">
             const app=document.getElementById('app');
-          
-          function Header() {
-return(<h1>
-    Dev2.ship2
-</h1>)
-
-          }
+         function Header () {}
+   
           function HomePage() {
-            return <div>
 
-<Header />
-            
+            const names = ['ada','grace','marg'];
+            return ( <div>
+
+<Header title="React" />
+            <ul> 
+                {names.map((name) => 
+                    (<li>{name}</li>))
+                }
+            </ul>
+        
             </div>
             
-            }
+            )}
+
           const root  = ReactDOM.createRoot(app);
 root.render(<HomePage />);
         </script>
